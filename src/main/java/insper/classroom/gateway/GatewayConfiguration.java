@@ -1,4 +1,4 @@
-package main.java.insper.classroom.gateway;
+package insper.classroom.gateway;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

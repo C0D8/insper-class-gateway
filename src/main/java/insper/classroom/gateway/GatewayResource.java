@@ -1,4 +1,4 @@
-package main.java.insper.classroom.gateway;
+package insper.classroom.gateway;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
