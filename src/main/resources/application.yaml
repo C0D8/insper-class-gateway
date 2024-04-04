@@ -23,6 +23,11 @@ spring:
           predicates:
             - Path=/
 
+        - id: classroom-aula
+          uri: lb://classroom-aula
+          predicates:
+            - Path=/aula/**
+
 management:
   endpoints:
     web:
@@ -43,4 +48,5 @@ api:
       POST /auth/register,
       POST /auth/login,
       ANY /auth/actuator,
-      ANY /accounts/actuator
+      ANY /accounts/actuator,
+      ANY /aula/**
