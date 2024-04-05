@@ -1,6 +1,6 @@
 spring:
   application:
-    name: classroom-gateway
+    name: store-gateway
 
   cloud:
     discovery:
@@ -23,11 +23,6 @@ spring:
           predicates:
             - Path=/
 
-        - id: classroom-aula
-          uri: lb://classroom-aula
-          predicates:
-            - Path=/aula/**
-
 management:
   endpoints:
     web:
@@ -48,5 +43,4 @@ api:
       POST /auth/register,
       POST /auth/login,
       ANY /auth/actuator,
-      ANY /accounts/actuator,
-      ANY /aula/**
+      ANY /accounts/actuator
