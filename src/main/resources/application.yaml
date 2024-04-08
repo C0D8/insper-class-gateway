@@ -28,6 +28,11 @@ spring:
           predicates:
             - Path=/aulas/**
 
+        - id: classroom-monitoria
+          uri: lb://classroom-monitoria
+          predicates:
+            - Path=/monitorias/**
+
 
 management:
   endpoints:
