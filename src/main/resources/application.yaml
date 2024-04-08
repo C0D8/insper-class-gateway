@@ -32,6 +32,11 @@ spring:
           uri: lb://classroom-monitoria
           predicates:
             - Path=/monitorias/**
+        
+        - id: classroom-departamento
+          uri: lb://classroom-departamento
+          predicates:
+            - Path=/departamentos/**
 
 
 management:
