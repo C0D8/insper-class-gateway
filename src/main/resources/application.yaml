@@ -59,4 +59,8 @@ api:
       POST /auth/register,
       POST /auth/login,
       ANY /auth/actuator,
-      ANY /accounts/actuator
+      ANY /accounts/actuator,
+      ANY /monitorias/**,
+      ANY /aulas/**,
+      ANY /departamentos/**
+      
