@@ -12,31 +12,21 @@ spring:
           uri: lb://classroom-auth
           predicates:
             - Path=/auth/**
-          filters:
-            - name: RewritePath
-              args:
-                regexp: "/auth/(?<segment>.*)"
-                replacement: "/$\\{segment}"
-          # Configuração de segurança para restringir acesso com base em roles
-          filters:
-            - name: Security
-              args:
-                authorities: ROLE_ADMIN
+
+          # filters:
+          #   - name: Security
+          #     args:
+          #       authorities: ROLE_ADMIN
                 
         - id: classroom-account
           uri: lb://classroom-account
           predicates:
             - Path=/accounts/**
-          filters:
-            - name: RewritePath
-              args:
-                regexp: "/accounts/(?<segment>.*)"
-                replacement: "/$\\{segment}"
-          # Configuração de segurança para restringir acesso com base em roles
-          filters:
-            - name: Security
-              args:
-                authorities: ROLE_ADMIN
+        
+          # filters:
+          #   - name: Security
+          #     args:
+          #       authorities: ROLE_ADMIN
 
         - id: insper
           uri: https://www.insper.edu.br
@@ -70,4 +60,11 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+      defaultZone: ${EUREKA_URI:http://10.97.72.208:8761/eureka/}
+api:
+  endpoints:
+    open: >
+      POST /auth/register,
+      POST /auth/login,
+      ANY /auth/actuator,
+      ANY /accounts/actuator
