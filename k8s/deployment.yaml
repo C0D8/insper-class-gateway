@@ -21,5 +21,8 @@ spec:
           ports:
             - containerPort: 8080
           env:
-          - name: eureka.client.service-url.defaultZone
-            value: http://10.97.72.208:8761/eureka/
+          - name: DISCOVERY_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: discovery-configmap
+                  key: DISCOVERY_HOST

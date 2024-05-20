@@ -5,7 +5,7 @@ metadata:
   labels:
     app: gateway
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 8761
       targetPort: 8080
