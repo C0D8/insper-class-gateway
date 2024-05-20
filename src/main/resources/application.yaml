@@ -1,6 +1,6 @@
 spring:
   application:
-    name: store-gateway
+    name: classroom-gateway
 
   cloud:
     discovery:
