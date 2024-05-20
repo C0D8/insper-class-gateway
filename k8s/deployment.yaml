@@ -21,7 +21,8 @@ spec:
           ports:
             - containerPort: 8080
           env:
-          - name: DISCOVERY_HOST
+
+            - name: DISCOVERY_HOST
               valueFrom:
                 configMapKeyRef:
                   name: discovery-configmap
