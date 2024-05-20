@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        K8S_PORT = 51971
-        TARGET = 'aws'
+        K8S_PORT = 63125
+        TARGET = 'local'
     }
     stages {
         stage('Build Auth') {
